@@ -6,11 +6,11 @@ import { useModal } from "./context/ModalContext"
 import { useBooks } from "./hooks/useBooks"
 
 const App = () => {
-  const { data: books, loading, error } = useBooks()
+  const { data: books, isLoading, isError } = useBooks()
   const { openModal, activeModal, selectedBook } = useModal()
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Something went wrong</p>
+  if (isLoading) return <p>Loading...</p>
+  if (isError) return <p>Something went wrong</p>
 
   return (
     <div>
