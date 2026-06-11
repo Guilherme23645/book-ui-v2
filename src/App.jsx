@@ -7,7 +7,7 @@ import { useBooks } from "./hooks/useBooks"
 
 const App = () => {
   const { data: books, loading, error } = useBooks()
-  const { openModal, activeModal, selectedModal } = useModal()
+  const { openModal, activeModal, selectedBook } = useModal()
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong</p>
